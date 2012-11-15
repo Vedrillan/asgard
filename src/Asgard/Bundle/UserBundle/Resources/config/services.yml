@@ -1,0 +1,7 @@
+parameters:
+#    asgard_user.example.class: Asgard\Bundle\UserBundle\Example
+
+services:
+#    asgard_user.example:
+#        class: %asgard_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,7 @@
+parameters:
+#    asgard_planner.example.class: Asgard\Bundle\PlannerBundle\Example
+
+services:
+#    asgard_planner.example:
+#        class: %asgard_planner.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
