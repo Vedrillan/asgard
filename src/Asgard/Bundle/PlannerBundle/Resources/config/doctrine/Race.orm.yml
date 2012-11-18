@@ -21,4 +21,5 @@ Asgard\Bundle\PlannerBundle\Entity\Race:
     manyToOne:
         game:
             targetEntity: Game
+            inversedBy: races
     lifecycleCallbacks: {  }

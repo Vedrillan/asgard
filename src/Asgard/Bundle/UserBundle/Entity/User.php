@@ -3,7 +3,7 @@
 namespace Asgard\Bundle\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use FOS\UserBundle\Document\User as BaseUser;
+use FOS\UserBundle\Entity\User as BaseUser;
 
 /**
  * Asgard\Bundle\UserBundle\Entity\User
@@ -36,6 +36,7 @@ class User extends BaseUser
     public function __construct()
     {
         $this->players = new \Doctrine\Common\Collections\ArrayCollection();
+        parent::__construct();
     }
     
     /**

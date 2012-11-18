@@ -12,4 +12,7 @@ Asgard\Bundle\UserBundle\Entity\User:
         players:
             targetEntity: Asgard\Bundle\PlannerBundle\Entity\Player
             mappedBy: user
+        messages:
+            targetEntity: Asgard\Bundle\PlannerBundle\Entity\Message
+            mappedBy: user
     lifecycleCallbacks: {  }

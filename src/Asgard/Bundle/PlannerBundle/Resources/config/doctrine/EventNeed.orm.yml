@@ -13,6 +13,12 @@ Asgard\Bundle\PlannerBundle\Entity\EventNeed:
     manyToOne:
         event:
             targetEntity: Event
+            inversedBy: needs
         role:
             targetEntity: Role
+            inversedBy: needs
+    oneToMany:
+        participations:
+            targetEntity: Participation
+            mappedBy: EventNeed
     lifecycleCallbacks: {  }

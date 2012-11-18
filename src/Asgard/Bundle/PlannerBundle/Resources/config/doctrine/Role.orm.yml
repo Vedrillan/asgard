@@ -16,4 +16,11 @@ Asgard\Bundle\PlannerBundle\Entity\Role:
             targetEntity: Player
         games:
             targetEntity: Game
+    oneToMany:
+        needs:
+            targetEntity: EventNeed
+            mappedBy: role
+        participations:
+            targetEntity: Participation
+            mappedBy: role
     lifecycleCallbacks: {  }

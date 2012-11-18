@@ -15,8 +15,11 @@ Asgard\Bundle\PlannerBundle\Entity\Participation:
     manyToOne:
         event:
             targetEntity: Event
+            inversedBy: participations
         player:
             targetEntity: Player
+            inversedBy: participations
         role:
             targetEntity: Role
+            inversedBy: participations
     lifecycleCallbacks: {  }

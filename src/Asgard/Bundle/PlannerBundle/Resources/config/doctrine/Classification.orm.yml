@@ -21,4 +21,5 @@ Asgard\Bundle\PlannerBundle\Entity\Classification:
     manyToOne:
         game:
             targetEntity: Game
+            inversedBy: classifications
     lifecycleCallbacks: {  }

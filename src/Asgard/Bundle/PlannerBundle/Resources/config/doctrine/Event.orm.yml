@@ -13,10 +13,13 @@ Asgard\Bundle\PlannerBundle\Entity\Event:
     manyToOne:
         mode:
             targetEntity: Mode
+            inversedBy: events
         capacity:
             targetEntity: Capacity
+            inversedBy: events
         location:
             targetEntity: Location
+            inversedBy: events
     oneToMany:
         needs:
             targetEntity: EventNeed

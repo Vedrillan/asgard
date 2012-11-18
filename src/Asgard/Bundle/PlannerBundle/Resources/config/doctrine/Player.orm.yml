@@ -14,13 +14,21 @@ Asgard\Bundle\PlannerBundle\Entity\Player:
     manyToOne:
         game:
             targetEntity: Game
+            inversedBy: players
         user:
             targetEntity: Asgard\Bundle\UserBundle\Entity\User
+            inversedBy: players
         race:
             targetEntity: Race
+            inversedBy: players
         classification:
             targetEntity: Classification
+            inversedBy: players
     manyToMany:
         roles:
             targetEntity: Role
+    oneToMany:
+        participations:
+            targetEntity: Participation
+            mappedBy: player
     lifecycleCallbacks: {  }
