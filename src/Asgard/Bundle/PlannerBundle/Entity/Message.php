@@ -5,32 +5,32 @@ namespace Asgard\Bundle\PlannerBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Asgard\Bundle\PlannerBundle\Entity\Message
+ * Message
  */
 class Message
 {
     /**
-     * @var integer $id
+     * @var integer
      */
     private $id;
 
     /**
-     * @var string $content
+     * @var string
      */
     private $content;
 
     /**
-     * @var \DateTime $date
+     * @var \DateTime
      */
     private $date;
 
     /**
-     * @var Asgard\Bundle\UserBundle\Entity\User
+     * @var \Asgard\Bundle\UserBundle\Entity\User
      */
     private $user;
 
     /**
-     * @var Asgard\Bundle\PlannerBundle\Entity\Event
+     * @var \Asgard\Bundle\PlannerBundle\Entity\Event
      */
     private $event;
 
@@ -94,7 +94,7 @@ class Message
     /**
      * Set user
      *
-     * @param Asgard\Bundle\UserBundle\Entity\User $user
+     * @param \Asgard\Bundle\UserBundle\Entity\User $user
      * @return Message
      */
     public function setUser(\Asgard\Bundle\UserBundle\Entity\User $user = null)
@@ -107,7 +107,7 @@ class Message
     /**
      * Get user
      *
-     * @return Asgard\Bundle\UserBundle\Entity\User 
+     * @return \Asgard\Bundle\UserBundle\Entity\User 
      */
     public function getUser()
     {
@@ -117,7 +117,7 @@ class Message
     /**
      * Set event
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Event $event
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Event $event
      * @return Message
      */
     public function setEvent(\Asgard\Bundle\PlannerBundle\Entity\Event $event = null)
@@ -130,7 +130,7 @@ class Message
     /**
      * Get event
      *
-     * @return Asgard\Bundle\PlannerBundle\Entity\Event 
+     * @return \Asgard\Bundle\PlannerBundle\Entity\Event 
      */
     public function getEvent()
     {

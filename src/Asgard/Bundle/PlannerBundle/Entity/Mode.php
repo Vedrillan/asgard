@@ -5,27 +5,27 @@ namespace Asgard\Bundle\PlannerBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Asgard\Bundle\PlannerBundle\Entity\Mode
+ * Mode
  */
 class Mode
 {
     /**
-     * @var integer $id
+     * @var integer
      */
     private $id;
 
     /**
-     * @var string $name
+     * @var string
      */
     private $name;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
+     * @var \Doctrine\Common\Collections\Collection
      */
     private $events;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
+     * @var \Doctrine\Common\Collections\Collection
      */
     private $locations;
 
@@ -74,7 +74,7 @@ class Mode
     /**
      * Add events
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Event $events
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Event $events
      * @return Mode
      */
     public function addEvent(\Asgard\Bundle\PlannerBundle\Entity\Event $events)
@@ -87,7 +87,7 @@ class Mode
     /**
      * Remove events
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Event $events
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Event $events
      */
     public function removeEvent(\Asgard\Bundle\PlannerBundle\Entity\Event $events)
     {
@@ -97,7 +97,7 @@ class Mode
     /**
      * Get events
      *
-     * @return Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection 
      */
     public function getEvents()
     {
@@ -107,7 +107,7 @@ class Mode
     /**
      * Add locations
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Location $locations
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Location $locations
      * @return Mode
      */
     public function addLocation(\Asgard\Bundle\PlannerBundle\Entity\Location $locations)
@@ -120,7 +120,7 @@ class Mode
     /**
      * Remove locations
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Location $locations
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Location $locations
      */
     public function removeLocation(\Asgard\Bundle\PlannerBundle\Entity\Location $locations)
     {
@@ -130,7 +130,7 @@ class Mode
     /**
      * Get locations
      *
-     * @return Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection 
      */
     public function getLocations()
     {

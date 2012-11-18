@@ -5,32 +5,32 @@ namespace Asgard\Bundle\PlannerBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Asgard\Bundle\PlannerBundle\Entity\Race
+ * Race
  */
 class Race
 {
     /**
-     * @var integer $id
+     * @var integer
      */
     private $id;
 
     /**
-     * @var string $name
+     * @var string
      */
     private $name;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
+     * @var \Doctrine\Common\Collections\Collection
      */
     private $players;
 
     /**
-     * @var Asgard\Bundle\PlannerBundle\Entity\Game
+     * @var \Asgard\Bundle\PlannerBundle\Entity\Game
      */
     private $game;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
+     * @var \Doctrine\Common\Collections\Collection
      */
     private $classifications;
 
@@ -79,7 +79,7 @@ class Race
     /**
      * Add players
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Player $players
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Player $players
      * @return Race
      */
     public function addPlayer(\Asgard\Bundle\PlannerBundle\Entity\Player $players)
@@ -92,7 +92,7 @@ class Race
     /**
      * Remove players
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Player $players
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Player $players
      */
     public function removePlayer(\Asgard\Bundle\PlannerBundle\Entity\Player $players)
     {
@@ -102,7 +102,7 @@ class Race
     /**
      * Get players
      *
-     * @return Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection 
      */
     public function getPlayers()
     {
@@ -112,7 +112,7 @@ class Race
     /**
      * Set game
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Game $game
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Game $game
      * @return Race
      */
     public function setGame(\Asgard\Bundle\PlannerBundle\Entity\Game $game = null)
@@ -125,7 +125,7 @@ class Race
     /**
      * Get game
      *
-     * @return Asgard\Bundle\PlannerBundle\Entity\Game 
+     * @return \Asgard\Bundle\PlannerBundle\Entity\Game 
      */
     public function getGame()
     {
@@ -135,7 +135,7 @@ class Race
     /**
      * Add classifications
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Classification $classifications
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Classification $classifications
      * @return Race
      */
     public function addClassification(\Asgard\Bundle\PlannerBundle\Entity\Classification $classifications)
@@ -148,7 +148,7 @@ class Race
     /**
      * Remove classifications
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Classification $classifications
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Classification $classifications
      */
     public function removeClassification(\Asgard\Bundle\PlannerBundle\Entity\Classification $classifications)
     {
@@ -158,7 +158,7 @@ class Race
     /**
      * Get classifications
      *
-     * @return Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection 
      */
     public function getClassifications()
     {

@@ -6,16 +6,35 @@ use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Entity\User as BaseUser;
 
 /**
- * Asgard\Bundle\UserBundle\Entity\User
+ * User
  */
 class User extends BaseUser
 {
     /**
-     * @var integer $id
+     * @var integer
      */
     protected $id;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $players;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $messages;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->players = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->messages = new \Doctrine\Common\Collections\ArrayCollection();
+        parent::__construct();
+    }
+    
     /**
      * Get id
      *
@@ -25,27 +44,14 @@ class User extends BaseUser
     {
         return $this->id;
     }
-    /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
-     */
-    private $players;
 
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->players = new \Doctrine\Common\Collections\ArrayCollection();
-        parent::__construct();
-    }
-    
     /**
      * Add players
      *
-     * @param Asgard\Bundle\UserBundle\Entity\Player $players
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Player $players
      * @return User
      */
-    public function addPlayer(\Asgard\Bundle\UserBundle\Entity\Player $players)
+    public function addPlayer(\Asgard\Bundle\PlannerBundle\Entity\Player $players)
     {
         $this->players[] = $players;
     
@@ -55,9 +61,9 @@ class User extends BaseUser
     /**
      * Remove players
      *
-     * @param Asgard\Bundle\UserBundle\Entity\Player $players
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Player $players
      */
-    public function removePlayer(\Asgard\Bundle\UserBundle\Entity\Player $players)
+    public function removePlayer(\Asgard\Bundle\PlannerBundle\Entity\Player $players)
     {
         $this->players->removeElement($players);
     }
@@ -65,10 +71,43 @@ class User extends BaseUser
     /**
      * Get players
      *
-     * @return Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection 
      */
     public function getPlayers()
     {
         return $this->players;
+    }
+
+    /**
+     * Add messages
+     *
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Message $messages
+     * @return User
+     */
+    public function addMessage(\Asgard\Bundle\PlannerBundle\Entity\Message $messages)
+    {
+        $this->messages[] = $messages;
+    
+        return $this;
+    }
+
+    /**
+     * Remove messages
+     *
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Message $messages
+     */
+    public function removeMessage(\Asgard\Bundle\PlannerBundle\Entity\Message $messages)
+    {
+        $this->messages->removeElement($messages);
+    }
+
+    /**
+     * Get messages
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getMessages()
+    {
+        return $this->messages;
     }
 }

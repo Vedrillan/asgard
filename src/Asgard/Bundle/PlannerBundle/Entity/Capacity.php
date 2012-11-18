@@ -5,27 +5,27 @@ namespace Asgard\Bundle\PlannerBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Asgard\Bundle\PlannerBundle\Entity\Capacity
+ * Capacity
  */
 class Capacity
 {
     /**
-     * @var integer $id
+     * @var integer
      */
     private $id;
 
     /**
-     * @var integer $value
+     * @var integer
      */
     private $value;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
+     * @var \Doctrine\Common\Collections\Collection
      */
     private $events;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
+     * @var \Doctrine\Common\Collections\Collection
      */
     private $locations;
 
@@ -74,7 +74,7 @@ class Capacity
     /**
      * Add events
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Event $events
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Event $events
      * @return Capacity
      */
     public function addEvent(\Asgard\Bundle\PlannerBundle\Entity\Event $events)
@@ -87,7 +87,7 @@ class Capacity
     /**
      * Remove events
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Event $events
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Event $events
      */
     public function removeEvent(\Asgard\Bundle\PlannerBundle\Entity\Event $events)
     {
@@ -97,7 +97,7 @@ class Capacity
     /**
      * Get events
      *
-     * @return Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection 
      */
     public function getEvents()
     {
@@ -107,7 +107,7 @@ class Capacity
     /**
      * Add locations
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Location $locations
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Location $locations
      * @return Capacity
      */
     public function addLocation(\Asgard\Bundle\PlannerBundle\Entity\Location $locations)
@@ -120,7 +120,7 @@ class Capacity
     /**
      * Remove locations
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Location $locations
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Location $locations
      */
     public function removeLocation(\Asgard\Bundle\PlannerBundle\Entity\Location $locations)
     {
@@ -130,7 +130,7 @@ class Capacity
     /**
      * Get locations
      *
-     * @return Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection 
      */
     public function getLocations()
     {

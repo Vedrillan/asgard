@@ -5,42 +5,47 @@ namespace Asgard\Bundle\PlannerBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Asgard\Bundle\PlannerBundle\Entity\Player
+ * Player
  */
 class Player
 {
     /**
-     * @var integer $id
+     * @var integer
      */
     private $id;
 
     /**
-     * @var string $name
+     * @var string
      */
     private $name;
 
     /**
-     * @var Asgard\Bundle\PlannerBundle\Entity\Game
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $participations;
+
+    /**
+     * @var \Asgard\Bundle\PlannerBundle\Entity\Game
      */
     private $game;
 
     /**
-     * @var Asgard\Bundle\UserBundle\Entity\User
+     * @var \Asgard\Bundle\UserBundle\Entity\User
      */
     private $user;
 
     /**
-     * @var Asgard\Bundle\PlannerBundle\Entity\Race
+     * @var \Asgard\Bundle\PlannerBundle\Entity\Race
      */
     private $race;
 
     /**
-     * @var Asgard\Bundle\PlannerBundle\Entity\Classification
+     * @var \Asgard\Bundle\PlannerBundle\Entity\Classification
      */
     private $classification;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
+     * @var \Doctrine\Common\Collections\Collection
      */
     private $roles;
 
@@ -49,6 +54,7 @@ class Player
      */
     public function __construct()
     {
+        $this->participations = new \Doctrine\Common\Collections\ArrayCollection();
         $this->roles = new \Doctrine\Common\Collections\ArrayCollection();
     }
     
@@ -86,9 +92,42 @@ class Player
     }
 
     /**
+     * Add participations
+     *
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Participation $participations
+     * @return Player
+     */
+    public function addParticipation(\Asgard\Bundle\PlannerBundle\Entity\Participation $participations)
+    {
+        $this->participations[] = $participations;
+    
+        return $this;
+    }
+
+    /**
+     * Remove participations
+     *
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Participation $participations
+     */
+    public function removeParticipation(\Asgard\Bundle\PlannerBundle\Entity\Participation $participations)
+    {
+        $this->participations->removeElement($participations);
+    }
+
+    /**
+     * Get participations
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getParticipations()
+    {
+        return $this->participations;
+    }
+
+    /**
      * Set game
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Game $game
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Game $game
      * @return Player
      */
     public function setGame(\Asgard\Bundle\PlannerBundle\Entity\Game $game = null)
@@ -101,7 +140,7 @@ class Player
     /**
      * Get game
      *
-     * @return Asgard\Bundle\PlannerBundle\Entity\Game 
+     * @return \Asgard\Bundle\PlannerBundle\Entity\Game 
      */
     public function getGame()
     {
@@ -111,7 +150,7 @@ class Player
     /**
      * Set user
      *
-     * @param Asgard\Bundle\UserBundle\Entity\User $user
+     * @param \Asgard\Bundle\UserBundle\Entity\User $user
      * @return Player
      */
     public function setUser(\Asgard\Bundle\UserBundle\Entity\User $user = null)
@@ -124,7 +163,7 @@ class Player
     /**
      * Get user
      *
-     * @return Asgard\Bundle\UserBundle\Entity\User 
+     * @return \Asgard\Bundle\UserBundle\Entity\User 
      */
     public function getUser()
     {
@@ -134,7 +173,7 @@ class Player
     /**
      * Set race
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Race $race
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Race $race
      * @return Player
      */
     public function setRace(\Asgard\Bundle\PlannerBundle\Entity\Race $race = null)
@@ -147,7 +186,7 @@ class Player
     /**
      * Get race
      *
-     * @return Asgard\Bundle\PlannerBundle\Entity\Race 
+     * @return \Asgard\Bundle\PlannerBundle\Entity\Race 
      */
     public function getRace()
     {
@@ -157,7 +196,7 @@ class Player
     /**
      * Set classification
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Classification $classification
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Classification $classification
      * @return Player
      */
     public function setClassification(\Asgard\Bundle\PlannerBundle\Entity\Classification $classification = null)
@@ -170,7 +209,7 @@ class Player
     /**
      * Get classification
      *
-     * @return Asgard\Bundle\PlannerBundle\Entity\Classification 
+     * @return \Asgard\Bundle\PlannerBundle\Entity\Classification 
      */
     public function getClassification()
     {
@@ -180,7 +219,7 @@ class Player
     /**
      * Add roles
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Role $roles
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Role $roles
      * @return Player
      */
     public function addRole(\Asgard\Bundle\PlannerBundle\Entity\Role $roles)
@@ -193,7 +232,7 @@ class Player
     /**
      * Remove roles
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Role $roles
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Role $roles
      */
     public function removeRole(\Asgard\Bundle\PlannerBundle\Entity\Role $roles)
     {
@@ -203,7 +242,7 @@ class Player
     /**
      * Get roles
      *
-     * @return Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection 
      */
     public function getRoles()
     {

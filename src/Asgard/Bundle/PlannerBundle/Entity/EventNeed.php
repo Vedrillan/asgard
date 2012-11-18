@@ -5,26 +5,38 @@ namespace Asgard\Bundle\PlannerBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Asgard\Bundle\PlannerBundle\Entity\EventNeed
+ * EventNeed
  */
 class EventNeed
 {
     /**
-     * @var integer $value
+     * @var integer
      */
     private $value;
 
     /**
-     * @var Asgard\Bundle\PlannerBundle\Entity\Event
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $participations;
+
+    /**
+     * @var \Asgard\Bundle\PlannerBundle\Entity\Event
      */
     private $event;
 
     /**
-     * @var Asgard\Bundle\PlannerBundle\Entity\Role
+     * @var \Asgard\Bundle\PlannerBundle\Entity\Role
      */
     private $role;
 
-
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->participations = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
     /**
      * Set value
      *
@@ -49,9 +61,42 @@ class EventNeed
     }
 
     /**
+     * Add participations
+     *
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Participation $participations
+     * @return EventNeed
+     */
+    public function addParticipation(\Asgard\Bundle\PlannerBundle\Entity\Participation $participations)
+    {
+        $this->participations[] = $participations;
+    
+        return $this;
+    }
+
+    /**
+     * Remove participations
+     *
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Participation $participations
+     */
+    public function removeParticipation(\Asgard\Bundle\PlannerBundle\Entity\Participation $participations)
+    {
+        $this->participations->removeElement($participations);
+    }
+
+    /**
+     * Get participations
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getParticipations()
+    {
+        return $this->participations;
+    }
+
+    /**
      * Set event
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Event $event
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Event $event
      * @return EventNeed
      */
     public function setEvent(\Asgard\Bundle\PlannerBundle\Entity\Event $event)
@@ -64,7 +109,7 @@ class EventNeed
     /**
      * Get event
      *
-     * @return Asgard\Bundle\PlannerBundle\Entity\Event 
+     * @return \Asgard\Bundle\PlannerBundle\Entity\Event 
      */
     public function getEvent()
     {
@@ -74,7 +119,7 @@ class EventNeed
     /**
      * Set role
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Role $role
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Role $role
      * @return EventNeed
      */
     public function setRole(\Asgard\Bundle\PlannerBundle\Entity\Role $role)
@@ -87,7 +132,7 @@ class EventNeed
     /**
      * Get role
      *
-     * @return Asgard\Bundle\PlannerBundle\Entity\Role 
+     * @return \Asgard\Bundle\PlannerBundle\Entity\Role 
      */
     public function getRole()
     {

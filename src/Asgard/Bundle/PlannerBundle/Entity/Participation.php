@@ -5,32 +5,32 @@ namespace Asgard\Bundle\PlannerBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Asgard\Bundle\PlannerBundle\Entity\Participation
+ * Participation
  */
 class Participation
 {
     /**
-     * @var boolean $retained
+     * @var boolean
      */
     private $retained;
 
     /**
-     * @var boolean $missing
+     * @var boolean
      */
     private $missing;
 
     /**
-     * @var Asgard\Bundle\PlannerBundle\Entity\Event
+     * @var \Asgard\Bundle\PlannerBundle\Entity\Event
      */
     private $event;
 
     /**
-     * @var Asgard\Bundle\PlannerBundle\Entity\Player
+     * @var \Asgard\Bundle\PlannerBundle\Entity\Player
      */
     private $player;
 
     /**
-     * @var Asgard\Bundle\PlannerBundle\Entity\Role
+     * @var \Asgard\Bundle\PlannerBundle\Entity\Role
      */
     private $role;
 
@@ -84,7 +84,7 @@ class Participation
     /**
      * Set event
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Event $event
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Event $event
      * @return Participation
      */
     public function setEvent(\Asgard\Bundle\PlannerBundle\Entity\Event $event)
@@ -97,7 +97,7 @@ class Participation
     /**
      * Get event
      *
-     * @return Asgard\Bundle\PlannerBundle\Entity\Event 
+     * @return \Asgard\Bundle\PlannerBundle\Entity\Event 
      */
     public function getEvent()
     {
@@ -107,7 +107,7 @@ class Participation
     /**
      * Set player
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Player $player
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Player $player
      * @return Participation
      */
     public function setPlayer(\Asgard\Bundle\PlannerBundle\Entity\Player $player)
@@ -120,7 +120,7 @@ class Participation
     /**
      * Get player
      *
-     * @return Asgard\Bundle\PlannerBundle\Entity\Player 
+     * @return \Asgard\Bundle\PlannerBundle\Entity\Player 
      */
     public function getPlayer()
     {
@@ -130,7 +130,7 @@ class Participation
     /**
      * Set role
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Role $role
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Role $role
      * @return Participation
      */
     public function setRole(\Asgard\Bundle\PlannerBundle\Entity\Role $role = null)
@@ -143,7 +143,7 @@ class Participation
     /**
      * Get role
      *
-     * @return Asgard\Bundle\PlannerBundle\Entity\Role 
+     * @return \Asgard\Bundle\PlannerBundle\Entity\Role 
      */
     public function getRole()
     {

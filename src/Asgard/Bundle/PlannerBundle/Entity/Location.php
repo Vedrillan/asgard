@@ -5,37 +5,37 @@ namespace Asgard\Bundle\PlannerBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Asgard\Bundle\PlannerBundle\Entity\Location
+ * Location
  */
 class Location
 {
     /**
-     * @var integer $id
+     * @var integer
      */
     private $id;
 
     /**
-     * @var string $name
+     * @var string
      */
     private $name;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
+     * @var \Doctrine\Common\Collections\Collection
      */
     private $events;
 
     /**
-     * @var Asgard\Bundle\PlannerBundle\Entity\Game
+     * @var \Asgard\Bundle\PlannerBundle\Entity\Game
      */
     private $game;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
+     * @var \Doctrine\Common\Collections\Collection
      */
     private $capacities;
 
     /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
+     * @var \Doctrine\Common\Collections\Collection
      */
     private $modes;
 
@@ -85,7 +85,7 @@ class Location
     /**
      * Add events
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Event $events
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Event $events
      * @return Location
      */
     public function addEvent(\Asgard\Bundle\PlannerBundle\Entity\Event $events)
@@ -98,7 +98,7 @@ class Location
     /**
      * Remove events
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Event $events
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Event $events
      */
     public function removeEvent(\Asgard\Bundle\PlannerBundle\Entity\Event $events)
     {
@@ -108,7 +108,7 @@ class Location
     /**
      * Get events
      *
-     * @return Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection 
      */
     public function getEvents()
     {
@@ -118,7 +118,7 @@ class Location
     /**
      * Set game
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Game $game
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Game $game
      * @return Location
      */
     public function setGame(\Asgard\Bundle\PlannerBundle\Entity\Game $game = null)
@@ -131,7 +131,7 @@ class Location
     /**
      * Get game
      *
-     * @return Asgard\Bundle\PlannerBundle\Entity\Game 
+     * @return \Asgard\Bundle\PlannerBundle\Entity\Game 
      */
     public function getGame()
     {
@@ -141,7 +141,7 @@ class Location
     /**
      * Add capacities
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Capacity $capacities
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Capacity $capacities
      * @return Location
      */
     public function addCapacitie(\Asgard\Bundle\PlannerBundle\Entity\Capacity $capacities)
@@ -154,7 +154,7 @@ class Location
     /**
      * Remove capacities
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Capacity $capacities
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Capacity $capacities
      */
     public function removeCapacitie(\Asgard\Bundle\PlannerBundle\Entity\Capacity $capacities)
     {
@@ -164,7 +164,7 @@ class Location
     /**
      * Get capacities
      *
-     * @return Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection 
      */
     public function getCapacities()
     {
@@ -174,7 +174,7 @@ class Location
     /**
      * Add modes
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Mode $modes
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Mode $modes
      * @return Location
      */
     public function addMode(\Asgard\Bundle\PlannerBundle\Entity\Mode $modes)
@@ -187,7 +187,7 @@ class Location
     /**
      * Remove modes
      *
-     * @param Asgard\Bundle\PlannerBundle\Entity\Mode $modes
+     * @param \Asgard\Bundle\PlannerBundle\Entity\Mode $modes
      */
     public function removeMode(\Asgard\Bundle\PlannerBundle\Entity\Mode $modes)
     {
@@ -197,7 +197,7 @@ class Location
     /**
      * Get modes
      *
-     * @return Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection 
      */
     public function getModes()
     {
