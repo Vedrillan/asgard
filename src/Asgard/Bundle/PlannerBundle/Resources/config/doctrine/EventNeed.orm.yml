@@ -1,0 +1,18 @@
+Asgard\Bundle\PlannerBundle\Entity\EventNeed:
+    type: entity
+    table: null
+    repositoryClass: Asgard\Bundle\PlannerBundle\Entity\EventNeedRepository
+    id:
+        event:
+            associationKey: true
+        role:
+            associationKey: true
+    fields:
+        value:
+            type: smallint
+    manyToOne:
+        event:
+            targetEntity: Event
+        role:
+            targetEntity: Role
+    lifecycleCallbacks: {  }

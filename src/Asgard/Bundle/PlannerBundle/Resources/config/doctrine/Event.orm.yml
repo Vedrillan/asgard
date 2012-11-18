@@ -1,0 +1,27 @@
+Asgard\Bundle\PlannerBundle\Entity\Event:
+    type: entity
+    table: null
+    repositoryClass: Asgard\Bundle\PlannerBundle\Entity\EventRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        date:
+            type: date        
+    manyToOne:
+        mode:
+            targetEntity: Mode
+        capacity:
+            targetEntity: Capacity
+        location:
+            targetEntity: Location
+    oneToMany:
+        needs:
+            targetEntity: EventNeed
+            mappedBy: event
+        messages:
+            targetEntity: Message
+            mappedBy: event
+    lifecycleCallbacks: {  }

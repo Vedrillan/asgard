@@ -1,0 +1,20 @@
+Asgard\Bundle\PlannerBundle\Entity\Capacity:
+    type: entity
+    table: null
+    repositoryClass: Asgard\Bundle\PlannerBundle\Entity\CapacityRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        value:
+            type: integer
+    manyToMany:
+        locations:
+            targetEntity: Location
+    oneToMany:
+        events:
+            targetEntity: Event
+            mappedBy: capacity
+    lifecycleCallbacks: {  }

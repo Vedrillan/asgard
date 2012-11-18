@@ -1,0 +1,19 @@
+Asgard\Bundle\PlannerBundle\Entity\Role:
+    type: entity
+    table: null
+    repositoryClass: Asgard\Bundle\PlannerBundle\Entity\RoleRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+    manyToMany:
+        players:
+            targetEntity: Player
+        games:
+            targetEntity: Game
+    lifecycleCallbacks: {  }

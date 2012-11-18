@@ -1,0 +1,24 @@
+Asgard\Bundle\PlannerBundle\Entity\Race:
+    type: entity
+    table: null
+    repositoryClass: Asgard\Bundle\PlannerBundle\Entity\RaceRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+    manyToMany:
+        classifications:
+            targetEntity: Classification
+    oneToMany:
+        players:
+            targetEntity: Player
+            mappedBy: race
+    manyToOne:
+        game:
+            targetEntity: Game
+    lifecycleCallbacks: {  }

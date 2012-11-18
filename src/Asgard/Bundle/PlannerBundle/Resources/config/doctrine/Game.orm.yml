@@ -1,0 +1,29 @@
+Asgard\Bundle\PlannerBundle\Entity\Game:
+    type: entity
+    table: null
+    repositoryClass: Asgard\Bundle\PlannerBundle\Entity\GameRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: text
+    oneToMany:
+        players:
+            targetEntity: Player
+            mappedBy: game
+        locations:
+            targetEntity: Location
+            mappedBy: game
+        races:
+            targetEntity: Race
+            mappedBy: game
+        classifications:
+            targetEntity: Classification
+            mappedBy: game
+    manyToMany:
+        roles:
+            targetEntity: Role
+    lifecycleCallbacks: {  }

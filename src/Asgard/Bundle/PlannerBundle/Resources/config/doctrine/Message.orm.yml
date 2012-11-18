@@ -1,0 +1,20 @@
+Asgard\Bundle\PlannerBundle\Entity\Message:
+    type: entity
+    table: null
+    repositoryClass: Asgard\Bundle\PlannerBundle\Entity\MessageRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        content:
+            type: text
+        date:
+            type: datetime
+    manyToOne:
+        user:
+            targetEntity: Asgard\Bundle\UserBundle\Entity\User
+        event:
+            targetEntity: Event
+    lifecycleCallbacks: {  }

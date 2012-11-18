@@ -1,0 +1,22 @@
+Asgard\Bundle\PlannerBundle\Entity\Participation:
+    type: entity
+    table: null
+    repositoryClass: Asgard\Bundle\PlannerBundle\Entity\ParticipationRepository
+    id:
+        event:
+            associationKey: true
+        player:
+            associationKey: true
+    fields:
+        retained:
+            type: boolean
+        missing:
+            type: boolean
+    manyToOne:
+        event:
+            targetEntity: Event
+        player:
+            targetEntity: Player
+        role:
+            targetEntity: Role
+    lifecycleCallbacks: {  }

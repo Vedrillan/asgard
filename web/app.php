@@ -1,6 +1,6 @@
 <?php
 
-use Symfony\Component\ClassLoader\ApcClassLoader;
+//use Symfony\Component\ClassLoader\ApcClassLoader;
 use Symfony\Component\HttpFoundation\Request;
 
 define('APP_ENV', (getenv('APP_ENV')?'dev':'prod'));
@@ -23,7 +23,9 @@ require_once __DIR__.'/../app/AppKernel.php';
 //require_once __DIR__.'/../app/AppCache.php';
 
 $kernel = new AppKernel(APP_ENV, DEBUG);
-$kernel->loadClassCache();
+if(APP_ENV === 'prod'){
+    $kernel->loadClassCache();
+}
 //$kernel = new AppCache($kernel);
 $request = Request::createFromGlobals();
 $response = $kernel->handle($request);

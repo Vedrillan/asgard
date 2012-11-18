@@ -1,0 +1,21 @@
+Asgard\Bundle\PlannerBundle\Entity\Mode:
+    type: entity
+    table: null
+    repositoryClass: Asgard\Bundle\PlannerBundle\Entity\ModeRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+    manyToMany:
+        locations:
+            targetEntity: Location
+    oneToMany:
+        events:
+            targetEntity: Event
+            mappedBy: mode
+    lifecycleCallbacks: {  }

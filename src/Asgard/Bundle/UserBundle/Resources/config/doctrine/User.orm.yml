@@ -8,4 +8,8 @@ Asgard\Bundle\UserBundle\Entity\User:
             id: true
             generator:
                 strategy: AUTO
+    oneToMany:
+        players:
+            targetEntity: Asgard\Bundle\PlannerBundle\Entity\Player
+            mappedBy: user
     lifecycleCallbacks: {  }

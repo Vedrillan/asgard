@@ -70,7 +70,6 @@ parameters:
 
 assetic:
     debug:          %kernel.debug%
-    use_controller: false
     filters:
         sass:    ~
         compass: ~
