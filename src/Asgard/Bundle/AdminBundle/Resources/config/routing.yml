@@ -1,0 +1,3 @@
+asgard_admin_homepage:
+    pattern:  /
+    defaults: { _controller: AsgardAdminBundle:Default:index }

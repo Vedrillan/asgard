@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Asgard\Bundle\PlannerBundle\AsgardPlannerBundle(),
             new Asgard\Bundle\UserBundle\AsgardUserBundle(),
+            new Asgard\Bundle\AdminBundle\AsgardAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

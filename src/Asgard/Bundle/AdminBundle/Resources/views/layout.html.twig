@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 {% block stylesheet %}
-    {% stylesheets filter="compass"
-        "@AsgardPlannerBundle/Resources/public/css/*.scss"
+    {% stylesheets filter="sass"
+        "@AsgardPlannerBundle/Resources/public/css/*.sass"
     %}
         <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}

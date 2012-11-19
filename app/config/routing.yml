@@ -1,3 +1,11 @@
+asgard_admin:
+    resource: "@AsgardAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+    
+asgard_planner:
+    resource: "@AsgardPlannerBundle/Resources/config/routing.yml"
+    prefix: /
+
 # Internal routing configuration to handle ESI
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
@@ -21,7 +29,3 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
-
-asgard_planner:
-    resource: "@AsgardPlannerBundle/Resources/config/routing.yml"
-    prefix:   /
