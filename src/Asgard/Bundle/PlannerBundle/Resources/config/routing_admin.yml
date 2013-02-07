@@ -1,0 +1,31 @@
+AsgardPlannerBundle_admin:
+    pattern:  /
+    defaults: { _controller: AsgardPlannerBundle:Default:index }
+
+AsgardPlannerBundle_admin_race:
+    resource: "@AsgardPlannerBundle/Resources/config/routing/race.yml"
+    prefix:   /race
+    
+AsgardPlannerBundle_admin_game:
+    resource: "@AsgardPlannerBundle/Resources/config/routing/game.yml"
+    prefix:   /game
+    
+AsgardPlannerBundle_admin_classification:
+    resource: "@AsgardPlannerBundle/Resources/config/routing/classification.yml"
+    prefix:   /classification
+
+AsgardPlannerBundle_admin_event:
+    resource: "@AsgardPlannerBundle/Resources/config/routing/event.yml"
+    prefix:   /event
+
+AsgardPlannerBundle_admin_location:
+    resource: "@AsgardPlannerBundle/Resources/config/routing/location.yml"
+    prefix:   /location
+    
+AsgardPlannerBundle_admin_player:
+    resource: "@AsgardPlannerBundle/Resources/config/routing/player.yml"
+    prefix:   /player
+    
+AsgardPlannerBundle_admin_mode:
+    resource: "@AsgardPlannerBundle/Resources/config/routing/mode.yml"
+    prefix:   /mode

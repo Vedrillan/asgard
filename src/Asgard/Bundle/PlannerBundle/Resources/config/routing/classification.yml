@@ -1,0 +1,30 @@
+admin_classification:
+    pattern:  /
+    defaults: { _controller: "AsgardPlannerBundle:Classification:index" }
+
+admin_classification_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AsgardPlannerBundle:Classification:show" }
+
+admin_classification_new:
+    pattern:  /new
+    defaults: { _controller: "AsgardPlannerBundle:Classification:new" }
+
+admin_classification_create:
+    pattern:  /create
+    defaults: { _controller: "AsgardPlannerBundle:Classification:create" }
+    requirements: { _method: post }
+
+admin_classification_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AsgardPlannerBundle:Classification:edit" }
+
+admin_classification_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AsgardPlannerBundle:Classification:update" }
+    requirements: { _method: post }
+
+admin_classification_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AsgardPlannerBundle:Classification:delete" }
+    requirements: { _method: post }

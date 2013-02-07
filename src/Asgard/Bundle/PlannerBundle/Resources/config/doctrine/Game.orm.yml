@@ -9,7 +9,8 @@ Asgard\Bundle\PlannerBundle\Entity\Game:
             generator:
                 strategy: AUTO
         name:
-            type: text
+            type: string
+            length: 255
     oneToMany:
         players:
             targetEntity: Player

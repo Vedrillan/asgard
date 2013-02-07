@@ -1,0 +1,30 @@
+admin_race:
+    pattern:  /
+    defaults: { _controller: "AsgardPlannerBundle:Race:index" }
+
+admin_race_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AsgardPlannerBundle:Race:show" }
+
+admin_race_new:
+    pattern:  /new
+    defaults: { _controller: "AsgardPlannerBundle:Race:new" }
+
+admin_race_create:
+    pattern:  /create
+    defaults: { _controller: "AsgardPlannerBundle:Race:create" }
+    requirements: { _method: post }
+
+admin_race_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AsgardPlannerBundle:Race:edit" }
+
+admin_race_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AsgardPlannerBundle:Race:update" }
+    requirements: { _method: post }
+
+admin_race_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AsgardPlannerBundle:Race:delete" }
+    requirements: { _method: post }

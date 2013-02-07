@@ -1,0 +1,30 @@
+admin_player:
+    pattern:  /
+    defaults: { _controller: "AsgardPlannerBundle:Player:index" }
+
+admin_player_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AsgardPlannerBundle:Player:show" }
+
+admin_player_new:
+    pattern:  /new
+    defaults: { _controller: "AsgardPlannerBundle:Player:new" }
+
+admin_player_create:
+    pattern:  /create
+    defaults: { _controller: "AsgardPlannerBundle:Player:create" }
+    requirements: { _method: post }
+
+admin_player_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AsgardPlannerBundle:Player:edit" }
+
+admin_player_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AsgardPlannerBundle:Player:update" }
+    requirements: { _method: post }
+
+admin_player_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AsgardPlannerBundle:Player:delete" }
+    requirements: { _method: post }

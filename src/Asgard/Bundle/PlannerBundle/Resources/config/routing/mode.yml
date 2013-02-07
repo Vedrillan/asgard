@@ -1,0 +1,30 @@
+admin_mode:
+    pattern:  /
+    defaults: { _controller: "AsgardPlannerBundle:Mode:index" }
+
+admin_mode_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AsgardPlannerBundle:Mode:show" }
+
+admin_mode_new:
+    pattern:  /new
+    defaults: { _controller: "AsgardPlannerBundle:Mode:new" }
+
+admin_mode_create:
+    pattern:  /create
+    defaults: { _controller: "AsgardPlannerBundle:Mode:create" }
+    requirements: { _method: post }
+
+admin_mode_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AsgardPlannerBundle:Mode:edit" }
+
+admin_mode_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AsgardPlannerBundle:Mode:update" }
+    requirements: { _method: post }
+
+admin_mode_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AsgardPlannerBundle:Mode:delete" }
+    requirements: { _method: post }

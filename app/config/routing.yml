@@ -1,5 +1,5 @@
 asgard_admin:
-    resource: "@AsgardAdminBundle/Resources/config/routing.yml"
+    resource: "@AsgardPlannerBundle/Resources/config/routing_admin.yml"
     prefix:   /admin
     
 asgard_planner:

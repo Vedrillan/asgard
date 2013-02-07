@@ -1,0 +1,30 @@
+admin_event:
+    pattern:  /
+    defaults: { _controller: "AsgardPlannerBundle:Event:index" }
+
+admin_event_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AsgardPlannerBundle:Event:show" }
+
+admin_event_new:
+    pattern:  /new
+    defaults: { _controller: "AsgardPlannerBundle:Event:new" }
+
+admin_event_create:
+    pattern:  /create
+    defaults: { _controller: "AsgardPlannerBundle:Event:create" }
+    requirements: { _method: post }
+
+admin_event_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AsgardPlannerBundle:Event:edit" }
+
+admin_event_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AsgardPlannerBundle:Event:update" }
+    requirements: { _method: post }
+
+admin_event_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AsgardPlannerBundle:Event:delete" }
+    requirements: { _method: post }

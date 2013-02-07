@@ -1,4 +1,10 @@
 {% extends 'AsgardPlannerBundle::layout.html.twig' %}
 {% block body %}
-Hello!
+    <a href="{{ url('admin_classification') }}">Classification</a>
+    <a href="{{ url('admin_event') }}">Event</a>
+    <a href="{{ url('admin_game') }}">Game</a>
+    <a href="{{ url('admin_location') }}">Location</a>
+    <a href="{{ url('admin_mode') }}">Mode</a>
+    <a href="{{ url('admin_player') }}">Player</a>
+    <a href="{{ url('admin_race') }}">Race</a>
 {% endblock %}
