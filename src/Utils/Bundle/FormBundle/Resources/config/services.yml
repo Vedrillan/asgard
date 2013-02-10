@@ -1,0 +1,5 @@
+services:
+    utils_form.form.type.dependent_entity:
+        class: Utils\Bundle\FormBundle\Form\Type\DependentEntityType
+        tags:
+            - { name: form.type, alias: dependent_entity }

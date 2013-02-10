@@ -29,3 +29,7 @@ AsgardPlannerBundle_admin_player:
 AsgardPlannerBundle_admin_mode:
     resource: "@AsgardPlannerBundle/Resources/config/routing/mode.yml"
     prefix:   /mode
+    
+AsgardPlannerBundle_admin_capacity:
+    resource: "@AsgardPlannerBundle/Resources/config/routing/capacity.yml"
+    prefix:   /capacity

@@ -7,6 +7,8 @@
         <tr>
             <th>Id</th>
             <th>Name</th>
+            <th>Game</th>
+            <th>Race</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -15,6 +17,14 @@
         <tr>
             <td><a href="{{ path('admin_classification_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
             <td>{{ entity.name }}</td>
+            <td>{{ entity.game.name }}</td>
+            <td>
+                <ul>
+                {% for race in entity.races %}
+                    <li>{{ race.name }}</li>
+                {% endfor %}
+                </ul>
+            </td>
             <td>
                 <ul>
                     <li>

@@ -12,9 +12,20 @@ class LocationType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('game')
-            ->add('capacities')
-            ->add('modes')
+            ->add('game', 'entity', array(
+                'class' => 'AsgardPlannerBundle:Game',
+                'property' => 'name',
+            ))
+            ->add('capacities', 'entity', array(
+                'class' => 'AsgardPlannerBundle:Capacity',
+                'property' => 'value',
+                'multiple' => true,
+            ))
+            ->add('modes', 'entity', array(
+                'class' => 'AsgardPlannerBundle:Mode',
+                'property' => 'name',
+                'multiple' => true,
+            ))
         ;
     }
 

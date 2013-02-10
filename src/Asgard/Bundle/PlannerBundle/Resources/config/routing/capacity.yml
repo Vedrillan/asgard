@@ -1,0 +1,30 @@
+admin_capacity:
+    pattern:  /
+    defaults: { _controller: "AsgardPlannerBundle:Capacity:index" }
+
+admin_capacity_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AsgardPlannerBundle:Capacity:show" }
+
+admin_capacity_new:
+    pattern:  /new
+    defaults: { _controller: "AsgardPlannerBundle:Capacity:new" }
+
+admin_capacity_create:
+    pattern:  /create
+    defaults: { _controller: "AsgardPlannerBundle:Capacity:create" }
+    requirements: { _method: post }
+
+admin_capacity_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AsgardPlannerBundle:Capacity:edit" }
+
+admin_capacity_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AsgardPlannerBundle:Capacity:update" }
+    requirements: { _method: post }
+
+admin_capacity_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AsgardPlannerBundle:Capacity:delete" }
+    requirements: { _method: post }

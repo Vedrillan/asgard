@@ -6,6 +6,10 @@ asgard_planner:
     resource: "@AsgardPlannerBundle/Resources/config/routing.yml"
     prefix: /
 
+UtilsFormBundle:
+    resource: "@UtilsFormBundle/Resources/config/routing.yml"
+    prefix:   /formutils/
+
 # Internal routing configuration to handle ESI
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"

@@ -12,6 +12,26 @@
             <th>Name</th>
             <td>{{ entity.name }}</td>
         </tr>
+        <tr>
+            <th>Capacity</th>
+            <td>
+                <ul>
+                    {% for capacity in entity.capacities %}
+                        <li>{{ capacity.value }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>Mode</th>
+            <td>
+                <ul>
+                    {% for mode in entity.modes %}
+                        <li>{{ mode.name }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
     </tbody>
 </table>
 

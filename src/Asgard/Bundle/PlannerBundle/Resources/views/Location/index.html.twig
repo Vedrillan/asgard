@@ -8,6 +8,8 @@
             <th>Id</th>
             <th>Name</th>
             <th>Actions</th>
+            <th>Capacity</th>
+            <th>Mode</th>
         </tr>
     </thead>
     <tbody>
@@ -15,6 +17,20 @@
         <tr>
             <td><a href="{{ path('admin_location_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
             <td>{{ entity.name }}</td>
+            <td>
+                <ul>
+                {% for capacity in entity.capacities %}
+                    <li>{{ capacity.value }}</li>
+                {% endfor %}
+                </ul>
+            </td>
+            <td>
+                <ul>
+                {% for mode in entity.modes %}
+                    <li>{{ mode.name }}</li>
+                {% endfor %}
+                </ul>
+            </td>
             <td>
                 <ul>
                     <li>

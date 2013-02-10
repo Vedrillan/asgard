@@ -12,6 +12,20 @@
             <th>Name</th>
             <td>{{ entity.name }}</td>
         </tr>
+        <tr>
+            <th>Game</th>
+            <td>{{ entity.game.name }}</td>
+        </tr>
+        <tr>
+            <th>Race</th>
+            <td>
+                <ul>
+                    {% for race in entity.races %}
+                        <li>{{ race.name }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
     </tbody>
 </table>
 

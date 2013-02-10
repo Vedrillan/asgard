@@ -12,10 +12,22 @@ class PlayerType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('game')
-            ->add('user')
-            ->add('race')
-            ->add('classification')
+            ->add('game', 'entity', array(
+                'class' => 'AsgardPlannerBundle:Game',
+                'property' => 'name',
+            ))
+            ->add('user', 'entity', array(
+                'class' => 'AsgardUserBundle:User',
+                'property' => 'username',
+            ))
+            ->add('race', 'entity', array(
+                'class' => 'AsgardPlannerBundle:Race',
+                'property' => 'name',
+            ))
+            ->add('classification', 'entity', array(
+                'class' => 'AsgardPlannerBundle:Classification',
+                'property' => 'name',
+            ))
         ;
     }
 

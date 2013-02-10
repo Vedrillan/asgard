@@ -16,10 +16,12 @@ class ClassificationType extends AbstractType
                 'class' => 'AsgardPlannerBundle:Game',
                 'property' => 'name',
             ))
-            ->add('races', 'entity', array(
+            ->add('races', 'dependent_entity', array(
                 'class' => 'AsgardPlannerBundle:Race',
                 'property' => 'name',
-                'multiple' => true
+                'multiple' => true,
+                'depends_field' => 'game',
+                'depends_class' => 'AsgardPlannerBundle:Game',
             ))
         ;
     }
